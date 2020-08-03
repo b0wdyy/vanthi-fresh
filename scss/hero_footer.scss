@@ -1,0 +1,13 @@
+.hero__footer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero__text {
+    padding-top: 0;
+    &__main {
+      max-width: 600px;
+    }
+  }
+}

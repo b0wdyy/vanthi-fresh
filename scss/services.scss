@@ -1,0 +1,119 @@
+.services {
+    margin-top: 7rem;
+    border-bottom: 1px solid $gray;
+
+    &__paragraph {
+        margin: 1.5rem 0;
+
+        max-width: 600px;
+        line-height: 1.7;
+
+        color: $text-blue;
+    }
+
+    &__container {
+        p:nth-of-type(2) {
+            position: relative;
+            display: inline-block;
+
+            margin-bottom: 2rem;
+
+            font-size: 1.1rem;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 5px;
+                right: -25px;
+                width: 12px;
+                height: 12px;
+
+                background-image: url("../assets/svg/arrow.svg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    &__link {
+        text-align: center;
+
+        margin: 5rem 0;
+
+        a {
+            color: $primary-blue;
+            border-bottom: 1px solid $primary-blue;
+        }
+    }
+
+    .list {
+        margin: 4rem 0 2rem;
+        position: relative;
+        z-index: 99;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 210px;
+            top: -25px;
+
+            display: inline-block;
+            width: 140px;
+            height: 140px;
+
+            background-image: url("../assets/svg/oval.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            z-index: -12;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -20px;
+            top: -60px;
+
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+
+            background-image: url("../assets/svg/Dots-red.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            z-index: -3;
+        }
+        &__item {
+            padding: 20px 50px 20px 30px;
+            margin: 10px 0;
+
+            box-shadow: 0 4px 2px -2px $gray;
+            border: 1px solid $gray;
+            border-radius: 3px;
+
+            background: $white;
+            &__number {
+                color: $black;
+            }
+
+            &__text {
+                h3 {
+                    color: $black;
+                }
+                p {
+                    color: $text-blue;
+                    margin-bottom: 1rem;
+                }
+
+                a {
+                    margin-top: 0;
+                    display: inline-block;
+                    color: $primary-blue;
+                    border-bottom: 1px solid $primary-blue;
+                }
+            }
+        }
+    }
+}

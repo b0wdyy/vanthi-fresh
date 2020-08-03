@@ -1,0 +1,35 @@
+.contact-details {
+  margin: 4rem 0rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__item {
+    &:nth-of-type(2) {
+      margin-left: 2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+      font-family: STIXGeneral;
+    }
+
+    &__data {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      color: $text-blue;
+    }
+
+    &__hours {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

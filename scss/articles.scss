@@ -1,0 +1,103 @@
+.articles {
+    margin: 4rem 0 8rem;
+    &__container {
+        display: grid;
+        grid-template-columns: 2.5fr 1fr;
+    }
+
+    &__updates {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+
+        background: $articles-bg;
+
+        padding: 30px 40px 30px 50px;
+
+        margin: 3rem 0;
+
+        article {
+            p:nth-child(3) {
+                color: $text-blue;
+                margin: 1rem 0 2rem;
+
+                line-height: 1.5;
+            }
+
+            h2 {
+                font-family: STIXGeneral;
+                font-weight: lighter;
+
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    top: 8px;
+                    left: -20px;
+                    content: "";
+                    display: inline-block;
+
+                    width: 2px;
+                    height: 30px;
+
+                    background: $primary-blue;
+                }
+            }
+        }
+    }
+
+    aside {
+        margin-left: 3rem;
+
+        h3 {
+            font-size: 1rem;
+        }
+        ul {
+            margin: 3rem 0;
+            a {
+                color: $text-blue;
+                opacity: 0.7;
+            }
+
+            li {
+                padding: 0 40px 32px 60px;
+                border-bottom: 1px solid $top-nav-border;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;
+
+                    width: 10px;
+                    height: 10px;
+
+                    background-image: url("../assets/svg/link.svg");
+                    background-size: 20px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-color: transparentize(
+                        $primary-blue,
+                        $amount: 0.9
+                    );
+                    padding: 20px;
+
+                    border-radius: 100%;
+                }
+
+                a {
+                    color: lighten($text-blue, $amount: 20);
+                }
+            }
+
+            li:not(:nth-of-type(1)) {
+                padding: 32px 60px;
+            }
+        }
+    }
+    .CTA {
+        color: $primary-blue;
+        border-bottom: 1px solid $primary-blue;
+    }
+}

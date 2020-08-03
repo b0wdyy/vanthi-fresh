@@ -1,0 +1,75 @@
+.top__nav {
+  background: $top-nav-bg;
+  border-bottom: 1px solid $top-nav-border;
+
+  height: 3rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
+  }
+  &__item {
+    &:not(:first-of-type) {
+      background: $top-nav-button-gray;
+      margin-left: 1rem;
+
+      display: flex;
+      align-items: center;
+
+      transition: 0.4s ease;
+      &:hover {
+        background: darken($top-nav-button-gray, $amount: 20);
+      }
+
+      a {
+        color: $text-blue;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          background-image: url("../assets/svg/mail.svg");
+          background-size: cover;
+          top: 7px;
+          height: 15px;
+          width: 15px;
+        }
+      }
+      img {
+        width: 13px;
+      }
+    }
+
+    &:hover {
+      background: darken($top-nav-button-green, $amount: 0.7);
+    }
+
+    background: lighten($top-nav-button-green, $amount: 25);
+    border-radius: 3px;
+
+    transition: 0.4s ease;
+
+    a {
+      color: $top-nav-button-text;
+      padding: 7px 20px 7px 35px;
+      display: inline-block;
+      position: relative;
+
+      font-size: 0.8rem;
+
+      &:before {
+        position: absolute;
+        left: 12px;
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-image: url("../assets/svg/phone-call.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        top: 9px;
+      }
+    }
+  }
+}
