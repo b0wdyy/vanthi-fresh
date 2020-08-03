@@ -20,6 +20,8 @@ burger.addEventListener("click", () => {
     burgerLine1.style.transform = "rotate(45deg)";
     burgerLine3.style.transform = "rotate(-45deg)";
     burgerLine3.style.width = "100%";
+
+    document.body.style.overflowY = "hidden";
   }
 
   if (navOpen) {
@@ -33,7 +35,17 @@ burger.addEventListener("click", () => {
     burgerLine1.style.transform = "rotate(0)";
     burgerLine3.style.transform = "rotate(0)";
     burgerLine3.style.width = "75%";
+
+    setTimeout(() => {
+      document.body.style.overflowY = "";
+    }, 1400);
   }
 
   navOpen = !navOpen;
 });
+
+const check = setInterval(() => {
+  if (window.screen.width >= 770) menu.style.transform = "translateX(0)";
+}, 3000);
+
+if (menu.style.transform == "translateX(0)") clearInterval(check);

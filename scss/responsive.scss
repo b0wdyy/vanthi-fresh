@@ -36,9 +36,69 @@
       grid-template-columns: 1fr;
     }
 
-    &__maps img {
-      margin-top: 2rem;
+    &__maps {
+      justify-self: initial;
+
+      img {
+        margin-top: 2rem;
+      }
     }
+
+    &__cards {
+      grid-template-rows: 0.2fr 1fr 0.25fr;
+      grid-template-columns: 1fr;
+
+      aside {
+        margin-right: 0;
+      }
+
+      &__item .card-news {
+        width: 100%;
+      }
+
+      &__item__card {
+        grid-row-start: 3;
+        width: 100%;
+
+        .appointment-list {
+          li {
+            flex: 1;
+            width: 100%;
+            text-align: center;
+            a {
+              display: inline-block;
+              width: 100%;
+              flex: 1;
+            }
+            &:nth-of-type(1) {
+              margin-right: 10px;
+            }
+            &:nth-of-type(2) {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+
+      &__item:nth-of-type(2) {
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        grid-column-start: 1;
+      }
+    }
+  }
+
+  .contact-details__container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-details__item:nth-of-type(2) {
+    margin-left: 0;
+  }
+
+  .footer__list__wrapper {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -98,11 +158,25 @@
   .hero-small {
     &__cards {
       grid-template-columns: 1fr;
+      // grid-template-rows: 1fr 5fr 1fr;
+
+      &__item .card-news {
+        width: 100%;
+      }
+
+      aside {
+        margin-right: 0;
+      }
     }
     &__maps {
       img {
         height: 380px;
+        width: 100%;
       }
+    }
+
+    &__card {
+      width: 100%;
     }
   }
 
@@ -151,6 +225,9 @@
     &__text {
       padding-top: 0;
     }
+    &__footer {
+      text-align: left;
+    }
 
     .list {
       margin-top: 5rem;
@@ -161,10 +238,31 @@
     }
   }
 
+  .intro__block__visual__card {
+    grid-template-rows: 0.6fr 1fr;
+    &__item {
+      li {
+        margin-top: 1rem;
+      }
+    }
+  }
+
   .hero-small__maps {
     img {
-      height: 300px;
+      height: 230px;
     }
+  }
+
+  .hero-small__card ul li {
+    padding: 10px 15px;
+  }
+
+  .hero-small__cards__item .card-news {
+    width: 100%;
+  }
+
+  .hero-small__cards aside {
+    margin-right: 0;
   }
 
   .contact-details {
@@ -203,7 +301,6 @@
 
     &__card {
       width: 300px;
-      height: 350px;
     }
   }
 
@@ -216,9 +313,24 @@
     top: -140px;
     opacity: 0.3;
   }
+
+  .discover__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 420px) {
+  .container {
+    max-width: 340px;
+  }
+  .intro__block__visual__card__item {
+    p {
+      margin-bottom: 20px;
+    }
+    ul {
+      margin: 20px 0;
+    }
+  }
   .footer {
     footer {
       .container {
@@ -240,26 +352,25 @@
     }
   }
 
-  .discover__grid {
-    grid-template-columns: 1fr;
-  }
   .hero-small__cards__item {
     width: 330px;
   }
 
-  .hero-small__maps {
-    img {
-      width: 100%;
+  .hero__footer {
+    text-align: left;
+  }
+
+  .hero__text__main {
+    h1 {
+      font-size: 2.1rem;
+    }
+    p {
+      margin: 1rem 0 3rem;
     }
   }
 
-  .hero-small__card {
-    width: 100%;
-    ul {
-      li {
-        padding: 10px 15px;
-      }
-    }
+  .contact-details {
+    margin: 4rem 0;
   }
 }
 
@@ -268,8 +379,13 @@
     max-width: 320px;
   }
 
-  .contact-details__item h1 {
-    font-size: 1.3rem;
+  .contact-details__item {
+    &__data {
+      grid-template-columns: 1.5fr 1fr;
+    }
+    h1 {
+      font-size: 1.3rem;
+    }
   }
 
   .hero-small__text {
@@ -308,7 +424,6 @@
 
   .intro__block__visual__card {
     width: 280px;
-    height: 380px;
   }
   .intro__block__visual__card__item:nth-of-type(2) {
     padding: 20px;
@@ -371,6 +486,14 @@
 
   .footer__list__wrapper img {
     width: 100%;
+  }
+  .hero-small__card {
+    button {
+      font-size: 0.9rem;
+    }
+    ul li {
+      padding: 10px;
+    }
   }
 
   .hero-small__cards__item {
