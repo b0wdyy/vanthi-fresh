@@ -201,7 +201,6 @@
         }
 
         &__list__wrapper {
-            grid-template-rows: 1fr 1fr 1fr;
             grid-template-columns: 1fr;
 
             img {
@@ -245,5 +244,122 @@
 
     .hero-small__text {
         padding-top: 6rem;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .container {
+        max-width: 280px;
+    }
+
+    .flex__links {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+    }
+
+    .hero__text a:nth-of-type(2) {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .intro__block__info {
+        text-align: left;
+    }
+    .intro__block__info__links {
+        display: flex;
+        flex-direction: column;
+
+        a:nth-of-type(2) {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+    }
+
+    .intro__block__visual__card {
+        width: 280px;
+        height: 380px;
+    }
+    .intro__block__visual__card__item:nth-of-type(2) {
+        padding: 20px;
+    }
+
+    .services__container p:nth-of-type(2)::before {
+        right: 0;
+    }
+
+    .services .list::after {
+        right: 0;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .date {
+        font-size: 0.8rem;
+    }
+
+    .articles__updates {
+        padding: 30px 40px;
+    }
+    .articles__updates article h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero__text__main h1 {
+        font-size: 1.85rem;
+    }
+    .hero__text__main p {
+        line-height: 1.5;
+    }
+
+    .hero__footer {
+        text-align: left;
+        .hero__text {
+            .flex__links {
+                margin-top: 4rem;
+
+                .CTA:nth-of-type(1) {
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+    .contact-details {
+        margin: 0;
+    }
+
+    .contact-details__item__hours ul {
+        font-size: 0.9rem;
+    }
+
+    .discover__grid__item img {
+        width: 280px;
+    }
+
+    .footer__list__wrapper img {
+        width: 100%;
+    }
+
+    .hero-small__cards__item {
+        width: 100%;
+    }
+
+    .hero-small__cards__item .card-news {
+        width: 100%;
+    }
+
+    .hero-small__cards__item__card .appointment-list {
+        flex-direction: column;
+
+        li {
+            text-align: center;
+            a {
+                width: 100%;
+                display: inline-block;
+            }
+        }
     }
 }
