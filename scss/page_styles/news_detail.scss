@@ -1,6 +1,15 @@
 .article-detail {
   margin: 5rem 0;
 
+  .container {
+    & > div {
+      p {
+        margin-bottom: 0.3rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
   div {
     &:nth-child(2) {
       h2:nth-of-type(2) {
@@ -10,7 +19,7 @@
         position: relative;
 
         margin: 2rem 0;
-        padding: 0 0 10px 50px;
+        padding: 0 0 20px 50px;
 
         border-bottom: 1px solid $top-nav-border;
 
@@ -50,6 +59,7 @@
         }
         p:nth-child(3) {
           margin-bottom: 0.8rem;
+          line-height: 1.5;
         }
       }
     }
@@ -73,7 +83,6 @@
 
     &:nth-of-type(2) {
       justify-self: end;
-      align-self: center;
       a {
         display: inline-block;
 
@@ -84,7 +93,7 @@
 
         width: 300px;
 
-        padding: 40px 30px;
+        padding: 20px 30px;
 
         h2 {
           color: $primary-blue;

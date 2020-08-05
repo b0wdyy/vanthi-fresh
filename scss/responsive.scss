@@ -8,11 +8,21 @@
   .hero-small__maps {
     height: 380px;
   }
+
+  .services .list {
+    grid-template-columns: repeat(2, 1fr);
+
+    &__item__text {
+      p {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1080px) {
   .container {
-    max-width: 900px;
+    max-width: 780px;
   }
 
   .intro__container {
@@ -207,17 +217,24 @@
     }
   }
 
-  .services .list::before {
-    left: 0;
-    top: 250px;
-  }
+  .services .list {
+    grid-template-columns: 1fr;
+    &::before {
+      left: 0;
+      top: 250px;
+    }
 
-  .services .list__item {
-    width: 100%;
+    &__item {
+      width: 100%;
 
-    &__text {
-      p {
-        width: 100%;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
+      &__text {
+        p {
+          width: 100%;
+        }
       }
     }
   }
@@ -282,6 +299,14 @@
 @media screen and (max-width: 530px) {
   .container {
     max-width: 350px;
+  }
+
+  .day {
+    flex-direction: column;
+    .hours,
+    .closed {
+      margin-top: 0.5rem;
+    }
   }
 
   .flex__links {
@@ -365,6 +390,14 @@
       }
     }
   }
+
+  .services__container > a::before {
+    right: 50%;
+
+    transform: translateY(-50%);
+    top: 80px;
+  }
+
   .services .list {
     &::before {
       left: 0;
@@ -575,7 +608,7 @@
 
 @media screen and (max-width: 330px) {
   .container {
-    max-width: 280px;
+    max-width: 270px;
   }
 
   .hero__text a:nth-of-type(2) {
@@ -624,9 +657,6 @@
 
   .hero__text__main h1 {
     font-size: 1.85rem;
-  }
-  .hero__text__main p {
-    line-height: 1.5;
   }
 
   .hero__footer {
@@ -733,7 +763,7 @@
   }
 
   .footer__yuki {
-    height: 160px;
+    height: 100%;
     margin-bottom: 0;
 
     padding: 10px;

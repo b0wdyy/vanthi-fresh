@@ -33,7 +33,7 @@
     }
 
     & > p {
-      line-height: 1.5;
+      line-height: 1.7;
       margin-top: 1rem;
     }
 
@@ -94,6 +94,10 @@
         border: 1px solid $top-nav-border;
 
         box-shadow: 0 4px 2px -2px $gray;
+
+        p {
+          line-height: 1.5;
+        }
 
         h3 {
           color: $black;
@@ -162,7 +166,7 @@
 
       &__promotion {
         background: $white;
-        padding: 45px 35px;
+        padding: 25px 35px;
         margin-bottom: 2rem;
 
         border-radius: 3px;

@@ -98,6 +98,15 @@ ul {
   color: $text-blue;
 }
 
+.day {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:nth-of-type(1)) {
+    margin-top: 1rem;
+  }
+}
+
 .filter-options {
   color: $black;
 
@@ -138,11 +147,10 @@ ul {
   &::after {
     content: "";
     display: inline-block;
-    // position: absolute;
     margin-left: 10px;
 
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
 
     background-image: url("../../assets/svg/arrow-blue.svg");
     background-size: cover;
