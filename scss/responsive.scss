@@ -4,6 +4,10 @@
     .container {
         max-width: 900px;
     }
+
+    .hero-small__maps {
+        height: 380px;
+    }
 }
 
 @media screen and (max-width: 1080px) {
@@ -36,11 +40,22 @@
             grid-template-columns: 1fr;
         }
 
+        &__card {
+            width: 100%;
+        }
+
         &__maps {
             justify-self: initial;
+            margin-top: 2rem;
+
+            max-height: 300px;
+            overflow: hidden;
 
             img {
-                margin-top: 2rem;
+                width: 100%;
+                height: initial;
+
+                transform: translateY(-12rem);
             }
         }
 
@@ -87,6 +102,10 @@
                 grid-column-start: 1;
             }
         }
+    }
+
+    .services .list::before {
+        top: 100px;
     }
 
     .contact-details__container {
@@ -137,6 +156,7 @@
                 justify-content: space-evenly;
 
                 transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+                z-index: 100;
                 li {
                     margin-left: 0;
                     a {
@@ -156,6 +176,7 @@
 
         .burger {
             display: inline-block;
+            z-index: 110;
         }
     }
 
@@ -183,14 +204,19 @@
         }
         &__maps {
             img {
-                height: 380px;
                 width: 100%;
+                transform: translateY(-3rem);
             }
         }
 
         &__card {
             width: 100%;
         }
+    }
+
+    .services .list::before {
+        left: 0;
+        top: 250px;
     }
 
     .list {
@@ -228,6 +254,18 @@
     .footer__list__wrapper {
         grid-template-columns: 1fr 1fr;
     }
+
+    .footer footer .container {
+        grid-template-columns: 1fr;
+
+        .btw {
+            margin-top: 1rem;
+        }
+    }
+
+    .footer footer .footer-details ul li:nth-of-type(1) {
+        margin-right: 5rem;
+    }
 }
 
 @media screen and (max-width: 530px) {
@@ -255,7 +293,7 @@
 
     .hero-small__maps {
         img {
-            height: 230px;
+            transform: scale(1.2);
         }
     }
 
@@ -283,6 +321,12 @@
 
             &__hours {
                 grid-template-columns: 0.5fr 1fr;
+            }
+
+            &__data {
+                ul:nth-of-type(2) {
+                    margin-left: 0.3rem;
+                }
             }
         }
     }
@@ -329,10 +373,38 @@
 
     .discover__grid {
         grid-template-columns: 1fr;
+
+        &__item:nth-of-type(2) {
+            margin-left: 0;
+        }
+    }
+
+    .footer footer {
+        .container {
+            grid-template-columns: 1fr;
+
+            .btw {
+                margin-top: 1rem;
+            }
+        }
+
+        .footer-details ul {
+            grid-template-columns: 1fr;
+
+            li {
+                &:nth-of-type(1) {
+                    margin: 0;
+                }
+                &:nth-of-type(2) {
+                    margin-top: 1rem;
+                }
+            }
+        }
     }
 
     .footer__yuki {
-        padding: 5px;
+        padding: 8px;
+        padding-bottom: 15px;
         .phone {
             width: 70px;
         }
@@ -356,10 +428,6 @@
     }
     .footer {
         footer {
-            .container {
-                flex-wrap: wrap;
-            }
-
             .btw {
                 margin-top: 1rem;
             }
@@ -405,6 +473,10 @@
             }
         }
     }
+
+    .services .list::after {
+        right: 0;
+    }
 }
 
 @media screen and (max-width: 380px) {
@@ -414,7 +486,7 @@
 
     .contact-details__item {
         &__data {
-            grid-template-columns: 1.5fr 1fr;
+            grid-template-columns: 1.2fr 1fr;
         }
         h1 {
             font-size: 1.3rem;
@@ -470,10 +542,6 @@
         right: 0;
     }
 
-    .services .list::after {
-        right: 0;
-    }
-
     .title {
         font-size: 1.8rem;
     }
@@ -511,6 +579,14 @@
 
     .contact-details {
         margin: 0;
+
+        &__item__data {
+            grid-template-columns: 1fr;
+
+            ul:nth-of-type(2) {
+                margin-left: 0;
+            }
+        }
     }
 
     .contact-details__item__hours ul {
@@ -521,12 +597,24 @@
         width: 280px;
     }
 
-    .hero-small__card {
-        button {
-            font-size: 0.9rem;
+    .hero-small {
+        &__card {
+            button {
+                font-size: 0.9rem;
+            }
+            ul li {
+                padding: 10px;
+
+                a {
+                    font-size: 0.8rem;
+                }
+            }
         }
-        ul li {
-            padding: 10px;
+
+        &__maps {
+            img {
+                transform: scale(1.8);
+            }
         }
     }
 
