@@ -46,6 +46,10 @@
             opacity: 0.67;
 
             grid-column: 2;
+
+            p {
+                line-height: 1.5;
+            }
         }
     }
     &__list__wrapper {

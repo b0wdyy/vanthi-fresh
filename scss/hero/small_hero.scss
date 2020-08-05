@@ -99,7 +99,7 @@
                     display: inline-block;
                     width: 100%;
                     padding: 20px 0;
-                    margin: 2rem 0;
+                    margin: 2rem 0 0.5rem;
 
                     background: transparentize($primary-blue, $amount: 0.94);
                     color: $primary-blue;
@@ -133,11 +133,11 @@
                         text-align: center;
 
                         &:nth-of-type(1) {
-                            margin-right: 0.25rem;
+                            padding-right: 0.25rem;
                         }
 
                         &:nth-of-type(2) {
-                            margin-left: 0.25rem;
+                            padding-left: 0.25rem;
                         }
                     }
 
@@ -183,6 +183,7 @@
 
         p {
             color: lighten($text-blue, $amount: 25);
+            line-height: 1.5;
         }
 
         button {
@@ -190,7 +191,7 @@
             position: relative;
             width: 100%;
             padding: 20px 10px 20px 0;
-            margin: 2rem 0;
+            margin: 2rem 0 0.5rem;
 
             font-size: 1rem;
 
@@ -226,7 +227,7 @@
             justify-content: space-between;
 
             li {
-                padding: 10px 15px;
+                padding: 12px 15px;
 
                 border: 1px solid transparentize($primary-blue, $amount: 0.94);
 
