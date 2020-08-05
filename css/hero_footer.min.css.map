@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,AAAC,CACZ,UAAU,CAAE,MAAM,CAClB,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,eAAe,CAAE,MAAM,CAQxB,AAZD,AAME,aANW,CAMX,WAAW,AAAC,CACV,WAAW,CAAE,CAAC,CAIf,AAXH,AAQI,aARS,CAQR,iBAAM,AAAC,CACN,SAAS,CAAE,KAAK,CACjB",
+    "sources": [
+        "../scss/hero_footer.scss"
+    ],
+    "names": [],
+    "file": "hero_footer.min.css"
+}
