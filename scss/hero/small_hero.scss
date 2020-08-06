@@ -44,6 +44,8 @@
       li {
         position: relative;
         padding-left: 30px;
+
+        line-height: 1.5;
         &::before {
           position: absolute;
           left: 0;
@@ -55,7 +57,6 @@
           width: 20px;
           height: 20px;
 
-          // background: $white;
           background-image: url("../../assets/svg/check.svg");
           background-size: cover;
         }
