@@ -17,6 +17,7 @@ burger.addEventListener("click", () => {
         });
 
         burgerLine2.style.opacity = 0;
+        burgerLine2.style.transform = "translateX(-80%)";
         burgerLine1.style.transform = "rotate(45deg)";
         burgerLine3.style.transform = "rotate(-45deg)";
         burgerLine3.style.width = "100%";
@@ -32,6 +33,7 @@ burger.addEventListener("click", () => {
         });
 
         burgerLine2.style.opacity = 1;
+        burgerLine2.style.transform = "translateX(0)";
         burgerLine1.style.transform = "rotate(0)";
         burgerLine3.style.transform = "rotate(0)";
         burgerLine3.style.width = "75%";
