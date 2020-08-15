@@ -67,6 +67,10 @@ ul {
 
 .CTA {
   padding-bottom: 1rem;
+  &.blue {
+    color: $primary-blue;
+    border-bottom: 1px solid $primary-blue;
+  }
 }
 
 .title {
@@ -186,4 +190,8 @@ ul {
 
     transform: rotate(90deg);
   }
+}
+
+section.border {
+  border-bottom: 1px solid $gray;
 }

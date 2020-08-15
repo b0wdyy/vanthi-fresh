@@ -13,6 +13,63 @@
     display: flex;
     margin: 10px 0;
 
+    &:nth-of-type(1) {
+      .list__item__number {
+        &::before {
+          background: $orange;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      .list__item__number {
+        &::before {
+          background: lighten($purple, $amount: 0.9);
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      .list__item__number {
+        &::before {
+          background: $green;
+        }
+      }
+    }
+    &:nth-of-type(4) {
+      .list__item__number {
+        &::before {
+          background: $orange;
+        }
+      }
+    }
+    &:nth-of-type(5) {
+      .list__item__number {
+        &::before {
+          background: $purple;
+        }
+      }
+    }
+    &:nth-of-type(6) {
+      .list__item__number {
+        &::before {
+          background: $orange;
+        }
+      }
+    }
+    &:nth-of-type(7) {
+      .list__item__number {
+        &::before {
+          background: $top-nav-button-green;
+        }
+      }
+    }
+    &:nth-of-type(8) {
+      .list__item__number {
+        &::before {
+          background: $orange;
+        }
+      }
+    }
+
     &__number {
       margin-right: 10px;
 
