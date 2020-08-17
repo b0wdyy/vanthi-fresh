@@ -146,6 +146,10 @@ section.services {
       border-bottom: 1px solid $gray;
     }
 
+    &:first-child {
+      padding: 10rem 0 6rem;
+    }
+
     &__number {
       font-size: 1.6rem;
 
@@ -191,6 +195,12 @@ section.services {
 
             border-radius: 3px;
             background: transparentize($primary-blue, $amount: 0.94);
+
+            transition: 0.4s ease;
+
+            &:hover {
+              background: transparentize($primary-blue, $amount: 0.7);
+            }
 
             @media (max-width: 530px) {
               margin-right: 0;

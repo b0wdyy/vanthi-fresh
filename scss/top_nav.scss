@@ -42,7 +42,7 @@
     }
 
     &:hover {
-      background: darken($top-nav-button-green, $amount: 0.7);
+      background: lighten($top-nav-button-green, $amount: 10);
     }
 
     background: lighten($top-nav-button-green, $amount: 25);

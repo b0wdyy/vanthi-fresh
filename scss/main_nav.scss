@@ -1,48 +1,54 @@
 header {
-    border-bottom: 1px solid $top-nav-border;
-    z-index: 99;
-    .main__nav {
+  border-bottom: 1px solid $top-nav-border;
+  z-index: 99;
+  .main__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 4.5rem;
+    &__group {
+      display: flex;
+
+      & > div {
+        margin-top: 3.4rem;
+      }
+
+      ul {
         display: flex;
         align-items: center;
-        justify-content: space-between;
 
-        height: 4.5rem;
-        &__group {
-            display: flex;
+        li {
+          margin-left: 40px;
 
-            & > div {
-                margin-top: 3.4rem;
+          a {
+            color: $text;
+
+            &.active {
+              color: $primary-blue;
             }
 
-            ul {
-                display: flex;
-                align-items: center;
-
-                li {
-                    margin-left: 40px;
-
-                    a {
-                        color: $text;
-
-                        &.active {
-                            color: $primary-blue;
-                        }
-
-                        &:active {
-                            color: $primary-blue;
-                        }
-                    }
-                }
+            &:active {
+              color: $primary-blue;
             }
+          }
         }
-
-        &__button {
-            color: $primary-blue;
-            background: lighten($primary-blue, $amount: 45);
-
-            border-radius: 3px;
-
-            padding: 10px 15px;
-        }
+      }
     }
+
+    &__button {
+      color: $primary-blue;
+      background: lighten($primary-blue, $amount: 45);
+
+      border-radius: 3px;
+
+      padding: 10px 15px;
+
+      transition: 0.4s ease;
+
+      &:hover {
+        background: lighten($primary-blue, $amount: 35);
+      }
+    }
+  }
 }
