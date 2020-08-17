@@ -128,9 +128,6 @@
 }
 
 // V3 SERVICES STYLING
-section.services {
-  border-bottom: 1px solid $gray;
-}
 
 .list.list--services {
   flex-direction: column;
@@ -209,7 +206,7 @@ section.services {
 
           @media (max-width: 330px) {
             position: relative;
-            left: -30px;
+            left: -15px;
           }
         }
       }
